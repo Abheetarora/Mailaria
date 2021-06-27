@@ -1,0 +1,48 @@
+#home-container {
+  text-align: center;
+  background-color: #fafafa; }
+  #home-container li {
+    background-color: #f4f5fc;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; }
+  #home-container input[type=text], #home-container select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; }
+  #home-container input[type=submit] {
+    width: 100%;
+    background-color: #2f3768;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; }
+  #home-container #editor {
+    width: 100%;
+    color: #494848;
+    height: 600px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: #e1f5f3;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; }
+  #home-container #feed-posts {
+    width: 70%;
+    padding: 10px; }
+  #home-container #user-friends {
+    width: 30%;
+    padding: 10px;
+    border-left: 1px solid lightgrey;
+    height: 100%; }

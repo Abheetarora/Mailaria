@@ -1,0 +1,21 @@
+<footer id="foot">
+    <ul>
+        <%if(locals.user) {%>
+        <li>
+            <a href="/">
+            Home
+        </a>
+        </li>
+        <li>
+            <a href="/users/profile/<%=user.id %>">
+                <%= user.name %>
+        </li>
+        
+        <% }else{ %>
+            <li>
+                Developed by Abheet Arora
+            </li>
+            <% } %>
+        
+            </ul>
+</footer>

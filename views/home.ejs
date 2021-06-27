@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="/css/home.css">
+<script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
+<div id="home-container">
+    <section id="feed-posts">
+        <div style="display: flex;">
+        <h1 style="font-family: 'Bebas Neue', cursive; font-size: 7em; color: rgb(43, 43, 90); margin-right: 350px; padding-left: 300px;" >Mailaria</h1>
+        <img src="https://lh3.googleusercontent.com/proxy/jlFKPBg_HERhWKMOQuCnPik8UE3fmEOWrvZHztELCBYQ1UE9XFB041bCrsh33DpoVGJB8UBfrTS6fw2gjMB0fNUiOX-nffBL_L_u0C4SkejVk_z2Aok" style="width: 300px;height: 300px;">
+    </div>
+        <% if(locals.user){ %>
+            <form id="kawal"action="/posts/create" id="new-post-form" method="POST">
+                <input type="text" name="subject" placeholder="subject">
+              <br>
+                <textarea name="content" id="editor" style="padding: 32px;">
+                    &lt;p&gt;This is some sample content.&lt;/p&gt;
+                </textarea>
+                <script>
+                    ClassicEditor
+                        .create( document.querySelector( '#editor' ) )
+                        .catch( error => {
+                            console.error( error );
+                        } );
+                </script>
+               
+                <input type="text" id="mails"name="emails" placeholder="example@gmail.com,example2@gmail.com"  required>
+                <label style="color: rgb(89, 0, 255);"> enter the email of people you want to send mails to, seperated each mail with a comma </label>
+                <h1 style="font-family: 'Bebas Neue', cursive; font-size: 3em;" >Schedule your emails</h1>
+                <details>
+                    <summary style="color: rgb(89, 0, 255);" >How to schedule your emails</summary>
+                    <p >To schedule your emails you need to select the time interval for the recurring mails , you can set the limit to the number of mails sent by filling the input box below (default is set to 10)</p>
+                  </details>
+                YEAR <input type="text" name="nyear" placeholder="number of year" value="0"  required>
+                MONTHS <input type="text" name="nmonths" placeholder="number of months" value="0" required>
+                DAYS<input type="text" name="ndays" placeholder="number of days"value="0"  required>
+                HOURS <input type="text" name="nhours" placeholder="number of hours" value="0" required>
+                MINUTES <input type="text" name="nminutes" placeholder="number of minutes"value="0"  required>
+                SECONDS <input type="text" name="nseconds" placeholder="number of seconds"value="10"  required>
+                <h3> Total number of mails you want to send  </h3>
+                <input type="text" name="eqty" placeholder="number of mails" required value="10">
+                CC <input type="checkbox" id="myCheck">       
+                <input type="submit" value="Send Mails">
+            </form>
+           
+           
+        <br><br><br><br><br>
+
+
+
+
+            <h1 style="font-family: 'Bebas Neue', cursive; font-size: 5em;" >History</h1>
+            <div id="posts-list-container">
+                <ul>
+                    <% for(post of posts){ %>
+                        
+                    <%- include('_post') -%>
+                        
+                    <%} %>
+                </ul>
+            </div>
+        </section>
+        
+        
+        <% } %>
+</div>
+
+<!-- importing this script for creating the comments -->
+
+<script src="/js/home_post_comments.js" ></script>
+<script src="/js/home_posts.js"></script>
+
