@@ -1,5 +1,5 @@
 # Mailaria
-# to run it on your local machine
+### to run it on your local machine
 clone it to your local machine
 ```
 ### go to config ---> nodemailers.js ---> in place of username and password set your username and password  
