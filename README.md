@@ -17,4 +17,6 @@ $ npm start
 ### http://mailaria.herokuapp.com/
 ```
 # issue
+```
 #### {currently facing an error in deployment regarding trim new-line , will be deployed soon }
+```
